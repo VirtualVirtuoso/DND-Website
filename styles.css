@@ -1,0 +1,274 @@
+#case-study > ul > li.page_item.page-item-232 > a {
+    margin-top: -24px;
+}
+
+#case-study p img {
+    float: none ;
+    height: 300px ;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100% ;
+}
+
+#case-study ul li a {
+    background: #333;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 13px;
+    width: calc(25% - 2px);
+}
+
+#case-study ul li a:hover {
+    background-color: #888;
+    cursor: pointer;
+}
+
+#content {
+    background: none;
+    float: left;
+    padding-bottom: 0;
+    width: calc(70% - 2px);
+}
+
+#content .content {
+    font-size: 20px;
+    margin: 0;
+    width: 100%;
+}
+
+#content .content p {
+    line-height: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#content .content ul li {
+    background: none;
+    line-height: 25px;
+    padding-left: 8px;
+}
+
+#content > div > div > h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#content > div > h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#content > div > h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+#content > h1 {
+    font-family: "Montserat", snans-serif;
+}
+
+#footer {
+    background: #001228;
+    width: calc(100% - 20px);
+}
+
+#footer p {
+    font-size: 12px;
+}
+
+#header {
+    background-image: url(https://i.imgur.com/NcdIJxu.png);
+    background-size: 100% 650px;
+    height: 630px;
+    margin: auto;
+    width: 100%;
+}
+
+#header > p {
+    background: #002d62;
+    color: white;
+    font-family: 'Montserrat', Roboto, sans-serif;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 700px;
+}
+
+#info-contact > iframe {
+    height: 300px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+}
+
+#logo {
+    display: none;
+}
+
+#nav {
+    background: #002d62;
+    float: none;
+    height: 50px;
+    width: 100%;
+}
+
+#nav > li > a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sidebar {
+    background: none;
+    border: 1px solid black;
+    float: right;
+    height: inherit;
+    padding: 0px;
+    width: 30%;
+}
+
+#sidebar > p > a {
+    display: none;
+}
+
+#sidebar h3 {
+    line-height: 23px;
+    margin-top: 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#sidebar h3 a {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#sidebar h4 {
+    background: #002d62;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 28px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+#sidebar p {
+    display: none;
+}
+
+#wrapper {
+    background: white;
+    margin: 0 auto 20px;
+    min-width: 1300px;
+    padding-bottom: 40px;
+}
+
+.content p {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.cycle {
+    display: none;
+}
+
+.divide > ul > li {
+    background-image: none;
+    color: #00adf0;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.gallery {
+    width: calc(100% - 100px)
+;
+}
+
+.gallery-item {
+    margin-top: 25px;
+}
+
+.left {
+    color: white;
+    margin-top: 6px;
+    width: 500px;
+}
+
+.nav-tab {
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: calc(100% - 50px);
+}
+
+.nav-wrapper {
+    background: #002d62;
+    height: 50px;
+    width: 100%;
+}
+
+.right {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.size-full {
+    display: inline-block;
+    float: left;
+    height: 250px;
+    margin-left: 6px;
+    width: 48%;
+}
+
+.size-thumbnail {
+    height: 400px;
+    width: calc(100% - 25px);
+}
+
+@font-face {
+  
+  font-family: 'Montserrat';
+  src: url(https://fonts.gstatic.com/s/montserrat/v12/rBHvpRWBkgyW99dXT88n7yEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+}
+
+body {
+    background: none;
+    width: 100%;
+}
+
+/**
+ * Theme modified by Struan McDonough (http://sunfishcreative.com)
+**/
+
+html {
+    background: #111;
+}
+
+p {
+    color: black;
+}
+
+strong {
+    color: #002d62;
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+    margin-top: 10p
+;
+    text-align: center;
+}
+
