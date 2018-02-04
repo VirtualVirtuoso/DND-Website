@@ -1,0 +1,26 @@
+h1, h2{
+    text-align: center;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "address telephone mobile";
+    text-align: center;
+}
+
+#address{
+    grid-area: address;
+}
+
+#telephone{
+    grid-area: telephone;
+}
+
+#mobile{
+    grid-area: mobile;
+}
+
+#email{
+    text-align: center;
+}

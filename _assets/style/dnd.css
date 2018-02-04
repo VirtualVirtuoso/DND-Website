@@ -1,0 +1,222 @@
+/**
+ * Imports
+**/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.gstatic.com/s/montserrat/v12/rBHvpRWBkgyW99dXT88n7yEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+}
+
+/**
+ * Grid format - implementing the lovely new CSS Grids format!
+**/
+
+html{
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 500px 100px auto auto 50px;
+    grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    font-family: arial, sans-serif;
+    background: black;
+    max-width: 1100px;
+    margin: auto;
+}
+
+@media (min-width: 670px) {
+    body{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 500px 50px auto 50px;
+        grid-template-areas:
+                "header header"
+                "nav nav"
+                "main aside"
+                "footer footer";
+    }
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 630px 1fr;
+    grid-template-areas: "voidleft center voidright";
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+}
+
+.left{
+    grid-area: left;
+}
+
+.center{
+    grid-area: center;
+}
+
+.right{
+    grid-area: right;
+}
+
+/**
+ * Header styling
+**/
+
+header{
+    background: url(/DND/_assets/img/header-sm.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+header p{
+    display: none;
+}
+
+@media (min-width: 670px) {
+
+    header {
+        background: url(/DND/_assets/img/header-md.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    header p {
+        display: inherit;
+        background: #002d62;
+        color: white;
+        font-family: 'Montserrat', Roboto, sans-serif;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        position: relative;
+        text-align: center;
+        width: 620px;
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        background: url(/DND/_assets/img/header-lg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+/**
+ * Navbar styling
+**/
+
+nav{
+    background-color: #002d62;
+}
+
+nav a:first-child{
+    border-left: 1px solid white;
+    margin-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-right: 1px solid white;
+    padding: 16px;
+    display: inline-block;
+    margin-left: -4px;
+}
+
+nav a:hover{
+    background-color: #0047bb;
+}
+
+@media (min-width: 670px) {
+    nav a {
+        padding: 16px;
+        margin-left: -4px;
+    }
+}
+
+/**
+ * Footer styling
+**/
+
+footer{
+    background-color: #002d62;
+    color: white;
+}
+
+.left {
+    margin-top: 18px;
+    padding-left: 20px;
+}
+
+.right{
+    margin-top: 18px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+
+/**
+ * Main Styling
+**/
+
+main{
+    padding: 10px;
+    background-color: white;
+}
+
+main p, main h1{
+    text-align: center;
+}
+
+/**
+ * Aside Styling
+**/
+
+aside{
+    background-color: white;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+
+aside .aside-header{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+aside a{
+    text-decoration: none;
+    color: #002969;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+
+

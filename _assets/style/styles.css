@@ -1,3 +1,16 @@
+@media (max-width: 1320px) {
+
+    #content {
+        width: 100%;
+    }
+
+    #sidebar {
+        width: 100%;
+        clear: both;
+    }
+
+}
+
 #case-study > ul > li.page_item.page-item-232 > a {
     margin-top: -24px;
 }
@@ -267,8 +280,7 @@ strong {
 ul {
     list-style: none;
     list-style-type: none;
-    margin-top: 10p
-;
+    margin-top: 10px;
     text-align: center;
 }
 

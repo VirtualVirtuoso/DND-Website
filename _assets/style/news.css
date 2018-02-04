@@ -1,0 +1,51 @@
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas:
+        "one two three"
+        "one four five"
+        "six seven seven";
+    margin-bottom: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.news-item{
+    background-size: 100% 100%;
+}
+
+#news-item-1{
+    grid-area: one;
+    background-image: url(/DND/_assets/img/thumbs/tower.png);
+}
+
+#news-item-2{
+    grid-area: two;
+    background-image: url(/DND/_assets/img/thumbs/flexo.png);
+}
+
+#news-item-3{
+    grid-area: three;
+    background-image: url(/DND/_assets/img/thumbs/corrugator.png);
+}
+
+#news-item-4{
+    grid-area: four;
+    background-image: url(/DND/_assets/img/thumbs/scunthorpe.png);
+}
+
+#news-item-5{
+    grid-area: five;
+    background-image: url(/DND/_assets/img/thumbs/international.png);
+}
+
+#news-item-6{
+    grid-area: six;
+    background-image: url(/DND/_assets/img/thumbs/turkey.png);
+}
+
+#news-item-7{
+    grid-area: seven;
+    background-image: url(/DND//_assets/img/thumbs/lebanon.png);
+}
