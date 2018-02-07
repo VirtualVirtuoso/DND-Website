@@ -16,57 +16,66 @@ html{
 }
 
 body{
+    background: #001228 url(/_assets/img/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.main-wrapper{
     display: grid;
-    grid-template-rows: 500px 100px auto auto 50px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 100%;
     grid-template-areas:
-            "header"
             "nav"
             "main"
             "aside"
             "footer";
     font-family: arial, sans-serif;
-    background: black;
     max-width: 1100px;
     margin: auto;
 }
 
-@media (min-width: 670px) {
-    body{
+.hidden-when-large{
+    width: 100%;
+}
+
+header{
+    grid-area: header;
+    display: none;
+}
+
+@media (min-width: 920px) {
+    .main-wrapper{
         display: grid;
         grid-template-columns: 3fr 1fr;
-        grid-template-rows: 500px 50px auto 50px;
+        grid-template-rows: 500px auto auto auto;
         grid-template-areas:
                 "header header"
                 "nav nav"
                 "main aside"
                 "footer footer";
     }
+
+    .hidden-when-large{
+        display: none;
+    }
+
+    header{
+        display: inline;
+    }
 }
 
-header{
-    grid-area: header;
-}
-
-nav{
-    grid-area: nav;
-    display: grid;
-    grid-template-columns: 1fr 630px 1fr;
-    grid-template-areas: "voidleft center voidright";
-}
 
 main{
     grid-area: main;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 aside{
     grid-area: aside;
-}
-
-footer{
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "left right";
 }
 
 .left{
@@ -86,7 +95,7 @@ footer{
 **/
 
 header{
-    background: url(/DND/_assets/img/header-sm.png) no-repeat;
+    background: url(/_assets/img/header-sm.png) no-repeat;
     background-size: 100% 100%;
 }
 
@@ -94,10 +103,19 @@ header p{
     display: none;
 }
 
+.underline{
+    margin-top: -20px;
+    width: 100px;
+}
+
 @media (min-width: 670px) {
 
+    .underline{
+        width: 354px;
+    }
+
     header {
-        background: url(/DND/_assets/img/header-md.png) no-repeat;
+        background: url(/_assets/img/header-md.png) no-repeat;
         background-size: 100% 100%;
     }
 
@@ -119,7 +137,7 @@ header p{
 
 @media (min-width: 1000px) {
     header {
-        background: url(/DND/_assets/img/header-lg.png) no-repeat;
+        background: url(/_assets/img/header-lg.png) no-repeat;
         background-size: 100% 100%;
     }
 }
@@ -130,11 +148,11 @@ header p{
 
 nav{
     background-color: #002d62;
-}
-
-nav a:first-child{
-    border-left: 1px solid white;
-    margin-left: 0;
+    height: 97px;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 344px 1fr;
+    grid-template-areas: "voidleft center voidright";
 }
 
 nav a {
@@ -143,40 +161,104 @@ nav a {
     text-transform: uppercase;
     font-weight: bold;
     border-right: 1px solid white;
-    padding: 16px;
+    padding: 5px 16px;
     display: inline-block;
     margin-left: -4px;
+    margin-top: 13px;
+}
+
+nav a:first-child{
+    margin-left: 26px;
+}
+
+nav .pre-break{
+    border-right: none;
+}
+
+nav a:last-child{
+    border-right: none;
+}
+
+@media (min-width: 720px) {
+    nav a {
+        margin-left: -4px;
+    }
+    nav{
+        height: 55px;
+        grid-template-columns: 1fr 630px 1fr;
+    }
+    .center br{
+        display: none;
+    }
+    nav a:first-child {
+        margin-left: 0;
+        border-left: 1px solid white;
+    }
+    nav a:last-child{
+        border-right: 1px solid white;
+    }
+    nav .pre-break{
+        border-right: 1px solid white;
+    }
+}
+
+@media (min-width: 920px) {
+    nav a {
+        padding: 16px;
+        margin-top: 0;
+    }
 }
 
 nav a:hover{
     background-color: #0047bb;
 }
 
-@media (min-width: 670px) {
-    nav a {
-        padding: 16px;
-        margin-left: -4px;
-    }
-}
+
 
 /**
  * Footer styling
 **/
 
 footer{
+    grid-area: footer;
     background-color: #002d62;
     color: white;
+    height: 66px;
 }
 
-.left {
+#left {
     margin-top: 18px;
     padding-left: 20px;
+    padding-right: 20px;
+    grid-area: left;
+    text-align: center;
 }
 
-.right{
+#right{
     margin-top: 18px;
-    padding-right: 20px;
-    text-align: right;
+    text-align: center;
+    grid-area: right;
+    padding-bottom: 10px;
+}
+
+@media(min-width: 411px) {
+    footer{
+        height: 50px;
+    }
+    #left{
+        text-align: left;
+    }
+    #right{
+        text-align: right;
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+}
+
+@media(min-width: 670px) {
+    #right{
+        margin-top: -17px;
+    }
 }
 
 
@@ -216,7 +298,48 @@ aside a{
     text-align: center;
     margin-bottom: 20px;
     display: inline-block;
+    width: 100%;
 }
 
+/**
+ * Flags
+**/
 
+.flag-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
 
+.flag-item{
+    height: auto;
+    width: 100%;
+    border: 2px solid #002d62;
+}
+
+.hidden-when-small{
+    display: none;
+    border: none;
+}
+
+@media (min-width: 470px) {
+    .flag-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .hidden-when-small{
+        display: block;
+        border: none;
+    }
+}
+
+h2, h3{
+    text-align: center;
+}
+
+.subtext{
+    margin-top: -6px;
+    color: #637992;
+}

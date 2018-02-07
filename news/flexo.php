@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D and D International</title>
     <link rel="stylesheet" href="../_assets/style/dnd.css"/>
     <link rel="stylesheet" href="../_assets/style/news.css"/>
 </head>
 <body>
 
-<header>
-    <p>National and International Factory Removals & Installations</p>
-</header>
+<div class="main-wrapper">
 
-<nav>
-    <div class="center">
-        <a href="/">Home</a>
-        <a href="/news">News</a>
-        <a href="/services">Services</a>
-        <a href="/caseStudies">Case Studies</a>
-        <a href="/sales">Sales</a>
-        <a href="/contact">Contact</a>
-    </div>
-</nav>
+<?php include_once('../_partials/header.php') ?>
+
+<?php include_once('../_partials/nav.php') ?>
 
 <main>
     <h1>Fischer & Krecke Flexo machine relocation</h1>
@@ -50,22 +41,10 @@
     </div>
 </main>
 
-<aside>
-    <div class="aside-header">Latest News</div>
-    <a href="#news1">The dismantling, relocation and commissioning of an Extruding Tower in the UK.</a>
-    <a href="#news2">Fischer & Krecke Flexo machine relocation</a>
-    <a href="#news3">Corrugating machine installation in Athens</a>
+<?php include_once('../_partials/aside.php') ?>
 
-    <div class="aside-header">Sales</div>
-    <a href="#sales1">NILPETER MO-330 OFFSET LABEL PRINTING MACHINE</a>
-    <a href="#sales2">Edale Sigma 510 (510mm web) label printing converting machine</a>
-    <a href="#sales3">MAIER HEIDENHEIM – UNWIND & REWIND MACHINES FOR SALE</a>
-</aside>
+<?php include_once('../_partials/footer.php') ?>
 
-<footer>
-    <div class="left">D&D International Engineering Services Limited</div>
-    <div class="right">sales@dndinteng.com</div>
-</footer>
-
+</div>
 </body>
 </html>
